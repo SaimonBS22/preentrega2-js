@@ -23,7 +23,7 @@ function total(precio){
 function carrito(){
     if(!document.getElementById('img-carrito')){
     let carritoCompras = document.createElement('img');
-    carritoCompras.src = 'carrito-compras.png';
+    carritoCompras.src = './imagenes/carrito-compras.png';
     carritoCompras.alt = 'Descripción de la imagen';
     carritoCompras.width = 50; 
     carritoCompras.height = 50; 
