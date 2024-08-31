@@ -5,7 +5,14 @@ const productos = [
     {nombre:'Wrap Caesar Pollo', precio:13000},
     {nombre:'Hamburguesa del Bajo', precio:12000},
     {nombre:'Facu Monster', precio:13500},
-]
+];
+
+
+
+let toJson = JSON.stringify(productos);
+localStorage.setItem('Productos',toJson);
+
+
 
 boton.forEach((botones, index) =>{
 botones.addEventListener('click', ()=>{
@@ -16,7 +23,10 @@ botones.addEventListener('click', ()=>{
 
 function total(precio){
     totalPrecio += precio;
-    document.getElementById('miInput').value = `${totalPrecio}`;
+    let miInput = document.getElementById('miInput');
+    if(miInput){
+         miInput.value = `Total:${totalPrecio}`;
+    }
 }
 
 
@@ -49,7 +59,7 @@ function input(){
     input.style.height = '25px';
     input.style.width = '150px';
     input.id = 'miInput';
-    input.value = `${totalPrecio}`;
+    input.value = `Total:${totalPrecio}`;
     document.getElementById('contenedor').appendChild(titulo);
     document.getElementById('contenedor').appendChild(input);
 }}};
