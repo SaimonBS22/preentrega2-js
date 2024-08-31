@@ -25,7 +25,7 @@ function total(precio){
     totalPrecio += precio;
     let miInput = document.getElementById('miInput');
     if(miInput){
-         miInput.value = `Total:${totalPrecio}`;
+         miInput.value = `${totalPrecio}`;
     }
 }
 
@@ -59,7 +59,7 @@ function input(){
     input.style.height = '25px';
     input.style.width = '150px';
     input.id = 'miInput';
-    input.value = `Total:${totalPrecio}`;
+    input.value = `${totalPrecio}`;
     document.getElementById('contenedor').appendChild(titulo);
     document.getElementById('contenedor').appendChild(input);
 }}};
